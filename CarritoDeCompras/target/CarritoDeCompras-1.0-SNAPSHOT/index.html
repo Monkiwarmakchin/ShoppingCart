@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tienda</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Tienda</h1>
+        <form action="http://localhost:8082/CarritoDeCompras/Carrito" method=get>
+            <table border="1">
+                <tr align="center">
+                    <th>Articulo</th>
+                    <th>Fotografia</th>
+                    <th>Precio</th>
+                    <th>Añadidos</th>
+                </tr>
+                <tr align="center">
+                    <td><input type="hidden" name="BasNomH" id="BasNomH" value="Basura"/>Basura</td>
+                    <td><img src="Imagenes/Basura.jpg" align="center" height="100" width="100"></td>
+                    <td><input type="hidden" name="BasPreH" id="BasPreH" value="1000"/>$1000</td>
+                    <td><input type="hidden" name="BasComH" id="BasComH" value="0" /><span id="BasComS">0</span></td>
+                    <td><button id="BasBut" type="button">Añadir</button></td>
+                    <script type="text/javascript">
+                        var BasCont = 0;
+                        var BasComS = document.getElementById("BasComS");
+                        var BasBut = document.getElementById("BasBut");
+                        BasBut.onclick = function ()
+                        {
+                            BasCont++;
+                            BasComS.innerHTML = BasCont;
+                            document.getElementById('BasComH').value = BasCont;
+                        }
+                    </script>
+                </tr>
+                <tr align="center">
+                    <td><input type="hidden" name="RinNomH" id="RinNomH" value="Riñones (pares)"/>Riñones<br>(Par)</td>
+                    <td><img src="Imagenes/Riniones.jpg" align="center" height="100" width="100"></td>
+                    <td><input type="hidden" name="RinPreH" id="RinPreH" value="20"/>$20</td>
+                    <td><input type="hidden" name="RinComH" id="RinComH" value="0" /><span id="RinComS">0</span></td>
+                    <td><button id="RinBut" type="button">Añadir</button></td>
+                    <script type="text/javascript">
+                        var RinCont = 0;
+                        var RinComS = document.getElementById("RinComS");
+                        var RinBut = document.getElementById("RinBut");
+                        RinBut.onclick = function ()
+                        {
+                            RinCont++;
+                            RinComS.innerHTML = RinCont;
+                            document.getElementById('RinComH').value = RinCont;
+                        }
+                    </script>
+                </tr>
+                <tr align="center">
+                    <td><input type="hidden" name="CarNomH" id="CarNomH" value="Carritos"/>Carrito<br>de<br>compras</td>
+                    <td><img src="Imagenes/Carrito.png" align="center" height="100" width="100"></td>
+                    <td><input type="hidden" name="CarPreH" id="CarPreH" value="150"/>$150</td>
+                    <td><input type="hidden" name="CarComH" id="CarComH" value="0" /><span id="CarComS">0</span></td>
+                    <td><button id="CarBut" type="button">Añadir</button></td>
+                    <script type="text/javascript">
+                        var CarCont = 0;
+                        var CarComS = document.getElementById("CarComS");
+                        var CarBut = document.getElementById("CarBut");
+                        CarBut.onclick = function ()
+                        {
+                            CarCont++;
+                            CarComS.innerHTML = CarCont;
+                            document.getElementById('CarComH').value = CarCont;
+                        }
+                    </script>
+                </tr>
+                <tr align="center">
+                    <td><input type="hidden" name="PagNomH" id="PagNomH" value="Paginas"/>Esta<br>misma<br>pagina</td>
+                    <td><img src="Imagenes/Pagina.jpg" align="center" height="100" width="100"></td>
+                    <td><input type="hidden" name="PagPreH" id="PagPreH" value="1"/>$1</td>
+                    <td><input type="hidden" name="PagComH" id="PagComH" value="0" /><span id="PagComS">0</span></td>
+                    <td><button id="PagBut" type="button">Añadir</button></td>
+                    <script type="text/javascript">
+                        var PagCont = 0;
+                        var PagComS = document.getElementById("PagComS");
+                        var PagBut = document.getElementById("PagBut");
+                        PagBut.onclick = function ()
+                        {
+                            PagCont++;
+                            PagComS.innerHTML = PagCont;
+                            document.getElementById('PagComH').value = PagCont;
+                        }
+                    </script>
+                </tr>
+                <tr align="center">
+                    <td><input type="hidden" name="CalNomH" id="CalNomH" value="Calificacion"/>+ 1<br>de calificacion<br>(siono profa)</td>
+                    <td><img src="Imagenes/Calificacion.gif" align="center" height="100" width="100"></td>
+                    <td><input type="hidden" name="CalPreH" id="CalPreH" value="10000"/>$10000</td>
+                    <td><input type="hidden" name="CalComH" id="CalComH" value="0" /><span id="CalComS">0</span></td>
+                    <td><button id="CalBut" type="button">Añadir</button></td>
+                    <script type="text/javascript">
+                        var CalCont = 0;
+                        var CalComS = document.getElementById("CalComS");
+                        var CalBut = document.getElementById("CalBut");
+                        CalBut.onclick = function ()
+                        {
+                            CalCont++;
+                            CalComS.innerHTML = CalCont;
+                            document.getElementById('CalComH').value = CalCont;
+                        }
+                    </script>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Carrito">
+        </form>
+    </body>
+</html>
